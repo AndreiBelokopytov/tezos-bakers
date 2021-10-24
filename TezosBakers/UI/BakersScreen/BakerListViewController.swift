@@ -36,34 +36,38 @@ class BakerListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var _items = [BakerListItemVM]()
-    private let _bakersService = BakersService(endpointProvider: DefaultEndpointProvider.shared)
+
     private let _delegate = BakerListViewControllerDefaultDelegate()
     
     private var _loading: LoadingViewController = {
         LoadingViewController()
     }()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        navigationItem.title = "Bakers"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        
+    private var _search: UISearchController = {
         let searchController = UISearchController()
-        searchController.searchBar.delegate = self
         searchController.obscuresBackgroundDuringPresentation = false
+        return searchController
+    }()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
-        navigationItem.searchController = searchController
-        navigationItem.hidesSearchBarWhenScrolling = false
-        
-        tableView.dataSource = self
-        tableView.allowsSelection = false
-        
-        loadBakers()
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.isOpaque = true
+        navigationController?.navigationBar.autoresizesSubviews = true
     }
     
-    func loadBakers() {
-        _delegate.needsLoadBakers(self)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.dataSource = self
+        _search.searchBar.delegate = self
+        
+        navigationItem.title = "Bakers"
+        navigationItem.searchController = _search
+        navigationItem.hidesSearchBarWhenScrolling = false
+        
+        _loadBakers()
     }
     
     func showLoading() {
@@ -74,6 +78,9 @@ class BakerListViewController: UIViewController {
         hideChild(view: _loading)
     }
     
+    private func _loadBakers() {
+        _delegate.needsLoadBakers(self)
+    }
 }
 
 extension BakerListViewController: UITableViewDataSource {
@@ -101,7 +108,7 @@ extension BakerListViewController: UISearchBarDelegate {
 }
 
 class BakersTableCell: UITableViewCell {
-    static var identifier = "BakerTableCell"
+    static var identifier = "BakersTableCell"
     static let logoPlaceholder = UIImage(named: "dummy_32x32_ffffff_cccccc")
     
     @IBOutlet weak var bakerImage: SDAnimatedImageView!

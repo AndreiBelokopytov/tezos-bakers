@@ -45,15 +45,15 @@ class LoadingViewController: UIViewController {
     private func _prepareView() {
         _horizontalContainer.addArrangedSubview(_activityIndicator)
         _horizontalContainer.addArrangedSubview(_statusLabel)
-        
+
         _verticalContainer.addArrangedSubview(_horizontalContainer)
-        
+
         view.addSubview(_verticalContainer)
     }
     
     private func _addConstraints() {
         let verticalContainerConstraints = _verticalContainer.constraintsForAnchoringTo(boundsOf: view)
-        
+
         NSLayoutConstraint.activate(verticalContainerConstraints)
     }
 }

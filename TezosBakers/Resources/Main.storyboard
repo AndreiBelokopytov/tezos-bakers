@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BakerTableCell" rowHeight="76" id="JLm-sh-qC8" customClass="BakersTableCell" customModule="TezosBakers" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BakersTableCell" rowHeight="76" id="JLm-sh-qC8" userLabel="BakersTableCell" customClass="BakersTableCell" customModule="TezosBakers" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JLm-sh-qC8" id="nqc-yV-dbS">
@@ -127,11 +127,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="bakerImage" destination="oHW-Y4-Rib" id="sFx-wk-LXp"/>
-                                            <outlet property="feeLabel" destination="pT5-1g-Wve" id="fR5-Ph-i7H"/>
-                                            <outlet property="freeSpaceLabel" destination="kjx-1G-F6G" id="Itq-hh-AYt"/>
-                                            <outlet property="nameLabel" destination="gfq-X1-7fn" id="5RY-QT-fyq"/>
-                                            <outlet property="stakingLabel" destination="L9b-sm-QsX" id="xkO-5r-S4k"/>
+                                            <outlet property="bakerImage" destination="oHW-Y4-Rib" id="EKW-bU-RJU"/>
+                                            <outlet property="feeLabel" destination="pT5-1g-Wve" id="33C-cG-2zN"/>
+                                            <outlet property="freeSpaceLabel" destination="kjx-1G-F6G" id="2oQ-tT-8cV"/>
+                                            <outlet property="nameLabel" destination="gfq-X1-7fn" id="jK4-2W-Qh6"/>
+                                            <outlet property="stakingLabel" destination="SgZ-Xo-ASy" id="lQI-X6-1gg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -148,7 +148,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Smn-I8-utd"/>
                     <connections>
-                        <outlet property="tableView" destination="Xbu-0M-DLF" id="7nr-WO-e3K"/>
+                        <outlet property="tableView" destination="Xbu-0M-DLF" id="Zma-Lw-frz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="40a-YF-duR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
