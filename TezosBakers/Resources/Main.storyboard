@@ -12,7 +12,7 @@
         <!--Baker List View Controller-->
         <scene sceneID="7Kc-DJ-48R">
             <objects>
-                <viewController id="mbd-GN-tnh" customClass="BakerListViewController" customModule="TezosBakers2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mbd-GN-tnh" customClass="BakerListViewController" customModule="TezosBakers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OhF-nk-iE3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BakerTableCell" rowHeight="76" id="JLm-sh-qC8" customClass="BakersTableCell" customModule="TezosBakers2" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BakerTableCell" rowHeight="76" id="JLm-sh-qC8" customClass="BakersTableCell" customModule="TezosBakers" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JLm-sh-qC8" id="nqc-yV-dbS">
@@ -154,52 +154,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="40a-YF-duR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1426.0869565217392" y="33.482142857142854"/>
-        </scene>
-        <!--Loading View Controller-->
-        <scene sceneID="rm2-k5-YeI">
-            <objects>
-                <viewController storyboardIdentifier="LoadingViewController" id="UQ4-Ib-COD" customClass="LoadingViewController" customModule="TezosBakers2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="n20-oD-9uo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4nR-yp-ilT">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="V6P-dy-WgP">
-                                        <rect key="frame" x="156" y="0.0" width="102.5" height="818"/>
-                                        <subviews>
-                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="AbP-d5-DK8">
-                                                <rect key="frame" x="0.0" y="399" width="20" height="20"/>
-                                            </activityIndicatorView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBX-le-IWx">
-                                                <rect key="frame" x="28" y="399" width="74.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="gzF-sO-iuV"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="4nR-yp-ilT" firstAttribute="top" secondItem="gzF-sO-iuV" secondAttribute="top" id="g5o-cX-PFb"/>
-                            <constraint firstItem="gzF-sO-iuV" firstAttribute="bottom" secondItem="4nR-yp-ilT" secondAttribute="bottom" id="mfk-3Y-QQa"/>
-                            <constraint firstItem="gzF-sO-iuV" firstAttribute="trailing" secondItem="4nR-yp-ilT" secondAttribute="trailing" id="n9e-ha-OUg"/>
-                            <constraint firstItem="4nR-yp-ilT" firstAttribute="leading" secondItem="gzF-sO-iuV" secondAttribute="leading" id="sC3-76-owO"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="activityInicator" destination="AbP-d5-DK8" id="4Od-pu-vFM"/>
-                        <outlet property="statusText" destination="hBX-le-IWx" id="F0o-fg-3GE"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UeI-bz-gL6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2412" y="33"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="60R-hw-IfP">

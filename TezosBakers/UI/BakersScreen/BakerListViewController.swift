@@ -37,8 +37,11 @@ class BakerListViewController: UIViewController {
     
     private var _items = [BakerListItemVM]()
     private let _bakersService = BakersService(endpointProvider: DefaultEndpointProvider.shared)
-    private var _loading: LoadingViewController?
     private let _delegate = BakerListViewControllerDefaultDelegate()
+    
+    private var _loading: LoadingViewController = {
+        LoadingViewController()
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,8 +59,6 @@ class BakerListViewController: UIViewController {
         tableView.dataSource = self
         tableView.allowsSelection = false
         
-        _loading = storyboard?.instantiateViewController(withIdentifier: "LoadingViewController") as? LoadingViewController
-        
         loadBakers()
     }
     
@@ -66,16 +67,13 @@ class BakerListViewController: UIViewController {
     }
     
     func showLoading() {
-        if let loading = _loading {
-            hideChild(view: loading)
-        }
+        showChild(view: _loading)
     }
     
     func hideLoading() {
-        if let loading = _loading {
-            hideChild(view: loading)
-        }
+        hideChild(view: _loading)
     }
+    
 }
 
 extension BakerListViewController: UITableViewDataSource {
