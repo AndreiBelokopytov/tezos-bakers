@@ -60,7 +60,7 @@
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="staking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SgZ-Xo-ASy">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="staking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6AU-ET-uSi">
                                                                                     <rect key="frame" x="35" y="0.0" width="41" height="14.5"/>
                                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -131,7 +131,7 @@
                                             <outlet property="feeLabel" destination="pT5-1g-Wve" id="33C-cG-2zN"/>
                                             <outlet property="freeSpaceLabel" destination="kjx-1G-F6G" id="2oQ-tT-8cV"/>
                                             <outlet property="nameLabel" destination="gfq-X1-7fn" id="jK4-2W-Qh6"/>
-                                            <outlet property="stakingLabel" destination="SgZ-Xo-ASy" id="lQI-X6-1gg"/>
+                                            <outlet property="stakingLabel" destination="L9b-sm-QsX" id="JbK-WN-z3b"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
