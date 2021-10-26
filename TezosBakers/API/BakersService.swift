@@ -18,13 +18,16 @@ class BakersService: ApiService {
         self.endpointProvider = endpointProvider
     }
     
-    func loadData(query: BakersQuery, completionHandler: @escaping OnDataLoaded<[Baker]>) {
+    func loadData(query: BakersQuery, completionHandler: OnDataLoaded<[Baker]>?) {
         guard let url = _buildURL(from: query) else {
             let errorMessage = "Can't instantiate bakers URL"
-            completionHandler((data: [], errorMessage))
+            completionHandler?((data: [], errorMessage))
             return
         }
-        loadData(url: url, completionHandler: completionHandler)
+        loadData(url: url) { (data, errorMessage) in
+            let data = (data ?? []).sorted(by: { $0.stakingBalance > $1.stakingBalance })
+            completionHandler?((data: data, errorMessage: errorMessage))
+        }
     }
     
     private func _buildURL(from query: BakersQuery) -> URL? {

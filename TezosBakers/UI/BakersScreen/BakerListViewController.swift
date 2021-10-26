@@ -9,6 +9,11 @@ import Foundation
 import UIKit
 import SDWebImage
 
+protocol BakerListViewControllerDelegate: AnyObject {
+    typealias OnLoadingFinished = () -> Void
+    func needsLoadBakers(_ controller: BakerListViewController, onLoadingFinished: OnLoadingFinished?)
+}
+
 class BakerListViewController: UIViewController {
     var errorMessage: String? = nil
     
@@ -33,11 +38,11 @@ class BakerListViewController: UIViewController {
         }
     }
     
+    var adapter: BakersServiceAdapter?
+    
     @IBOutlet weak var tableView: UITableView!
     
     private var _items = [BakerListItemVM]()
-
-    private let _delegate = BakerListViewControllerDefaultDelegate()
     
     private var _loading: LoadingViewController = {
         LoadingViewController()
@@ -79,7 +84,8 @@ class BakerListViewController: UIViewController {
     }
     
     private func _loadBakers() {
-        _delegate.needsLoadBakers(self)
+        showLoading()
+        adapter?.needsLoadBakers(self) { [weak self] in self?.hideLoading() }
     }
 }
 

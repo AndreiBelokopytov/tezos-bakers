@@ -8,7 +8,7 @@
 import Foundation
 
 extension ApiService {
-    func loadData(url: URL, completionHandler: @escaping OnDataLoaded<Model>) {
+    func loadData(url: URL, completionHandler: OnDataLoaded<Model>?) {
         var errorMessage: String?
         var result: Model?
         let decoder = JSONDecoder()
@@ -28,7 +28,7 @@ extension ApiService {
             // TODO: check response status
             
             DispatchQueue.main.async {
-                completionHandler((result, errorMessage))
+                completionHandler?((result, errorMessage))
             }
         }.resume()
     }

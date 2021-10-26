@@ -18,24 +18,6 @@ extension UIView {
         ]
     }
     
-    func constraintsForAnchoringTo(marginsOf view: UIView) -> [NSLayoutConstraint] {
-        return [
-            topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
-            leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
-            bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor),
-            trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor)
-        ]
-    }
-    
-    func constraintsForAnchoringTo(safeAreaOf view: UIView) -> [NSLayoutConstraint] {
-        return [
-            topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
-        ]
-    }
-    
     func constraintsForEqualSize(size: CGFloat) -> [NSLayoutConstraint] {
         return [
             widthAnchor.constraint(equalTo: heightAnchor),

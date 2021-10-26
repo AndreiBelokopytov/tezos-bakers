@@ -16,5 +16,5 @@ protocol ApiService {
     
     var endpointProvider: EndpointProvider { get }
     
-    func loadData(query: Query, completionHandler: @escaping OnDataLoaded<Model>)
+    func loadData(query: Query, completionHandler: OnDataLoaded<Model>?)
 }

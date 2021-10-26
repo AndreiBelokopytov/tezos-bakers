@@ -20,15 +20,5 @@ struct BakerListItemVM {
         return nil
     }
     
-    private var _logo: String?
-}
-
-extension BakerListItemVM {
-    init(baker: Baker) {
-        _logo = baker.logo
-        name = baker.name
-        staking = baker.stakingBalance.abbreviated()
-        freeSpace = baker.freeSpace.abbreviated()
-        fee = String(format: "%.2f%%", baker.fee * 100)
-    }
+    internal var _logo: String?
 }

@@ -12,7 +12,7 @@
         <!--Baker List View Controller-->
         <scene sceneID="7Kc-DJ-48R">
             <objects>
-                <viewController id="mbd-GN-tnh" customClass="BakerListViewController" customModule="TezosBakers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BakerListViewController" id="mbd-GN-tnh" customClass="BakerListViewController" customModule="TezosBakers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OhF-nk-iE3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
